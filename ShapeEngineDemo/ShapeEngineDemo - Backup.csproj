@@ -28,7 +28,7 @@
 
 
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-	  <Exec Command="C:\Users\daveg\Desktop\raylib\repos\ShapeEngine\ResourcePacker\bin\Release\net6.0\ResourcePacker.exe $(ProjectDir) &quot;resources&quot; $(OutDir) &quot;false&quot;" />
+	  <Exec Command="echo Config: $(Configuration)&#xD;&#xA;C:\Users\daveg\Desktop\raylib\repos\ShapeEngine\ResourcePacker\bin\Release\net6.0\ResourcePacker.exe $(ProjectDir) &quot;resources&quot; $(OutDir) " />
 	</Target>
 
 

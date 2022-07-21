@@ -202,7 +202,14 @@ namespace ShapeEngineCore
             QUIT = true;
         }
 
-
+        public void LoadResources()
+        {
+            ShapeEngine.LoadTempData("resource.txt", "resourceNames.txt");
+        }
+        public void DeleteResources()
+        {
+            DeleteDirectory("resources");
+        }
         public void Initialize(ScreenInitInfo screenInitInfo, DataInitInfo dataInitInfo, params string[] launchParams)
         {
             LAUNCH_PARAMS = launchParams;
@@ -325,6 +332,8 @@ namespace ShapeEngineCore
 
         //public virtual void PreInit() { } //called before initialization -> use for setting specific vars
         public virtual void Start() { } //called after initialization
+        
+        public virtual void SetupFinished() { }
         public virtual void PreUpdate(float dt) { } //always called before update
         public virtual void HandleInput() { }//called before update to handle global input
         public virtual void PreDraw() { }//called before draw
